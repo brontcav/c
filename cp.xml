@@ -90,6 +90,13 @@
 <thumbnail></thumbnail>
 </regex>
 
+<regex>
+<name>enlace</name>
+<expres><![CDATA[(?s)<link rel="canonical" href="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com[regex.param1]</page>	
+<fanart></fanart>
+<thumbnail></thumbnail>
+</regex>
 
 
 <regex>
@@ -102,7 +109,7 @@
 <fanart>[regex1.param1]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[(?s)poster="([^"]+).*?[\w\W\s]{0,150}video-name="([^"]+).*?[\w\W\s]{0,250}<source src="([^"]+).*?]]></expres>
-<page>https://www.canalporno.com[regex.param1]</page>
+<page>$doregex[enlace]</page>
 </regex>
 
 
