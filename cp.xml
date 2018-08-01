@@ -44,7 +44,7 @@
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[(?s)<source src="([^"]+).*?]]></expres>
-<page>https://www.canalporno.com[regex.param3].html</page>
+<page>https://www.canalporno.com[regex.param3]</page>
 </regex>
 
 
