@@ -292,7 +292,7 @@
 <listrepeat><![CDATA[
 <SetViewMode>50</SetViewMode>
 <title>[COLOR lightseagreen][regex.param2][/COLOR]</title>
-<link>$doregex[regex1]</link>
+<link>$doregex[paginado2]</link>
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart>
 ]]></listrepeat> 
