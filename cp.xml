@@ -1,7 +1,7 @@
 <item>
 <SetViewMode>50</SetViewMode>
 
-<title>[COLOR white]CP[/COLOR]</title>
+<title>[COLOR white]Prueba[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 
@@ -59,7 +59,7 @@
 <item>
 <SetViewMode>50</SetViewMode>
 
-<title>[COLOR white]CP[/COLOR]</title>
+<title>[COLOR white]Actrices[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 
@@ -110,7 +110,7 @@
 <name>regex2</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex1.param2][/COLOR]</title>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
 <urlsolve>[regex2.param1]</urlsolve>
 <thumbnail>[regex1.param1]</thumbnail>
 <fanart>[regex1.param1]</fanart>
@@ -131,7 +131,7 @@
 <item>
 <SetViewMode>50</SetViewMode>
 
-<title>[COLOR white]CP[/COLOR]</title>
+<title>[COLOR white]Sitios[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 
@@ -182,7 +182,157 @@
 <name>regex2</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex1.param2][/COLOR]</title>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
+<urlsolve>[regex2.param1]</urlsolve>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)<source src="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com[regex1.param3]</page>
+</regex>
+
+
+
+
+<fanart></fanart>
+<thumbnail></thumbnail>
+
+</item>
+
+<item>
+<SetViewMode>50</SetViewMode>
+
+<title>[COLOR white]Sitios[/COLOR]</title>
+<link>$doregex[paginado]</link>
+
+
+<regex>
+<name>paginado</name>
+<listrepeat><![CDATA[
+<title>[COLOR white]Sitios[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
+<link>$doregex[regex]</link>
+<fanart></fanart>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'1','2','3','4','5',</page>
+</regex>
+
+<regex>
+<name>regex</name>
+<listrepeat><![CDATA[
+<SetViewMode>50</SetViewMode>
+<title>[COLOR lightseagreen][regex.param2][/COLOR]</title>
+<link>$doregex[regex1]</link>
+<thumbnail>[regex.param3]</thumbnail>
+<fanart>[regex.param3]</fanart>
+]]></listrepeat> 
+<expres><![CDATA[(?s)<h2><a href="([^"]+).*?>([^<]+).*?[\w\W\s]{0,150}<img src="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com/sitios/page[paginado.param1].html</page>	
+<fanart></fanart>
+<thumbnail></thumbnail>
+</regex>
+
+
+
+
+<regex>
+<name>regex1</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
+<link>$doregex[regex2]</link>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)data-src="([^"]+).*?alt="([^"]+).*?[\w\W\s]{0,450}<h2><a href="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com[regex.param1]</page>
+</regex>
+
+<regex>
+<name>regex2</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
+<urlsolve>[regex2.param1]</urlsolve>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)<source src="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com[regex1.param3]</page>
+</regex>
+
+
+
+
+<fanart></fanart>
+<thumbnail></thumbnail>
+
+</item><item>
+<SetViewMode>50</SetViewMode>
+
+<title>[COLOR white]Sitios con paginado[/COLOR]</title>
+<link>$doregex[paginado]</link>
+
+
+<regex>
+<name>paginado</name>
+<listrepeat><![CDATA[
+<title>[COLOR white]Sitios[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
+<link>$doregex[regex]</link>
+<fanart></fanart>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'1','2','3','4','5',</page>
+</regex>
+
+<regex>
+<name>regex</name>
+<listrepeat><![CDATA[
+<SetViewMode>50</SetViewMode>
+<title>[COLOR lightseagreen][regex.param2][/COLOR]</title>
+<link>$doregex[regex1]</link>
+<thumbnail>[regex.param3]</thumbnail>
+<fanart>[regex.param3]</fanart>
+]]></listrepeat> 
+<expres><![CDATA[(?s)<h2><a href="([^"]+).*?>([^<]+).*?[\w\W\s]{0,150}<img src="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com/sitios/page[paginado.param1].html</page>	
+<fanart></fanart>
+<thumbnail></thumbnail>
+</regex>
+
+<regex>
+<name>paginado2</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][regex.param2][COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
+<link>$doregex[regex1]</link>
+<fanart></fanart>
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'1','2','3','4','5','6','7','8',</page>
+</regex>
+
+
+<regex>
+<name>regex1</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
+<link>$doregex[regex2]</link>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)data-src="([^"]+).*?alt="([^"]+).*?[\w\W\s]{0,450}<h2><a href="([^"]+).*?]]></expres>
+<page>https://www.canalporno.com[regex.param1]/page[paginado2.param1].html</page>
+</regex>
+
+<regex>
+<name>regex2</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
 <urlsolve>[regex2.param1]</urlsolve>
 <thumbnail>[regex1.param1]</thumbnail>
 <fanart>[regex1.param1]</fanart>
