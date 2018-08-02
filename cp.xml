@@ -325,7 +325,7 @@
 <fanart>[regex1.param1]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[(?s)data-src="([^"]+).*?alt="([^"]+).*?[\w\W\s]{0,450}<h2><a href="([^"]+).*?]]></expres>
-<page>https://www.canalporno.com[regex.param1]/page[paginado2.param1].html</page>
+<page>https://www.canalporno.com[regex.param1]page[paginado2.param1].html</page>
 </regex>
 
 <regex>
