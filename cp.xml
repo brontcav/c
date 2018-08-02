@@ -39,7 +39,7 @@
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
 <title>[COLOR lightsalmon][regex.param1][/COLOR]</title>
-<urlsolve>[regex1.param1]</ursolve>
+<urlsolve>[regex1.param1]</urlsolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
