@@ -38,7 +38,7 @@
 <name>regex1</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex.param1][/COLOR]</title>
+<title>[COLOR lightsalmon][regex.param1][/COLOR]</title>
 <urlsolve>[regex1.param1]</ursolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
