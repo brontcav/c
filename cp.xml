@@ -99,8 +99,8 @@
 <SetViewMode>55</SetViewMode>
 <title>[COLOR lightsalmon][regex1.param2][/COLOR]</title>
 <link>$doregex[regex2]</link>
-<thumbnail>[regex1.param2]</thumbnail>
-<fanart>[regex1.param2]</fanart>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[(?s)data-src="([^"]+).*?alt="([^"]+).*?[\w\W\s]{0,450}<h2><a href="([^"]+).*?]]></expres>
 <page>https://www.canalporno.com[regex.param1]</page>
@@ -112,8 +112,8 @@
 <SetViewMode>55</SetViewMode>
 <title>[COLOR lighsalmon][regex1.param2][/COLOR]</title>
 <urlsolve>[regex2.param1]</urlsolve>
-<thumbnail>[regex1.param2]</thumbnail>
-<fanart>[regex1.param2]</fanart>
+<thumbnail>[regex1.param1]</thumbnail>
+<fanart>[regex1.param1]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[(?s)<source src="([^"]+).*?]]></expres>
 <page>https://www.canalporno.com[regex1.param3]</page>
