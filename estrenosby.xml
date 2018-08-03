@@ -94,10 +94,10 @@ def GetLSProData(page_data,Cookie_Jar,m):
     dialog = xbmcgui.Dialog()
     ret = dialog.select('Ver con:', ['Quasar', 'Torrenter', 'Elementum', 'Torrentin'])
     channels = [
-	'plugin://plugin.video.quasar/play?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
-	'plugin://plugin.video.torrenter/?action=playSTRM&url=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
-	'plugin://plugin.video.elementum/play?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
-	'plugin://plugin.video.torrentin/?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0']	
+	'plugin://plugin.video.quasar/play?uri=http://estrenosby.net/[regex4.param1]&image=imageurl&player=0',
+	'plugin://plugin.video.torrenter/?action=playSTRM&url=http://estrenosby.net/[regex4.param1]&image=imageurl&player=0',
+	'plugin://plugin.video.elementum/play?uri=http://estrenosby.net/[regex4.param1]&image=imageurl&player=0',
+	'plugin://plugin.video.torrentin/?uri=http://estrenosby.net/[regex4.param1]&image=imageurl&player=0']	
     return channels[ret]
 ]]></expres>
 <page></page>
