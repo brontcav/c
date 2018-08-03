@@ -1,0 +1,108 @@
+<!--ESTRENOSBY-->
+
+<item>
+<SetViewMode>55</SetViewMode>
+<title>[B][COLOR darkgreen]ESTRENOSBY [COLOR goldenrod]CARTELERA[/COLOR][/B]</title>
+<link>$doregex[paginado]</link>
+ 
+ 
+<regex>
+<name>paginado</name>
+<listrepeat><![CDATA[
+<title>[COLOR darkgreen]HDRip[COLOR gold] Pagina [COLOR lime][makelist3.param1][/COLOR]</title>
+<link>$doregex[regex]</link>
+<fanart></fanart> 
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115',</page>
+</regex>
+ 
+ 
+ 
+<regex>
+<name>regex</name>
+<listrepeat><![CDATA[
+<title>[COLOR mediumviolet][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[regex1]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[(?s)<div class="MiniFicha">[\w\W\s]{0,150}<a href="([^"]+).*?img src="([^"]+).*?[\w\W\s]{0,350}">([^<]+).*?[\w\W\s]{0,100}&raquo;([^<]+).*?]]></expres>
+<page>http://estrenosby.net/descarga-0-58126-0-0-fx-1-[paginado.param1]-.fx</page>
+</regex>
+ 
+ 
+<regex>
+<name>regex1</name>
+<listrepeat><![CDATA[
+<title>[COLOR mediumviolet][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[regex2]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[(?s)<div id="link_tt" class="links">[\w\W\s]{0,50}<a href="([^"]+).*?]]></expres>
+<page>[regex.param1]</page>
+</regex>
+
+<regex>
+<name>regex2</name>
+<listrepeat><![CDATA[
+<title>[COLOR mediumviolet][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[regex3]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[(?s)<div id="link_tt" class="links">[\w\W\s]{0,50}<a href="([^"]+).*?]]></expres>
+<page>[regex1.param1]</page>
+</regex>
+
+<regex>
+<name>regex3</name>
+<listrepeat><![CDATA[
+<title>[COLOR mediumviolet][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[regex4]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[(?s)putlocker</strong></div>[\w\W\s]{0,150}<a href="([^"]+).*?]]></expres>
+<page>[regex2.param1]</page>
+</regex>
+
+<regex>
+<name>regex4</name>
+<listrepeat><![CDATA[
+<title>[COLOR mediumviolet][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[select]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[(?s)Descargar Torrent: </span><br>[\w\W\s]{0,50}<a href="([^"]+).*?]]></expres>
+<page>[regex3.param1]</page>
+</regex>
+
+<regex>
+<name>select</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    ret = dialog.select('Ver con:', ['Quasar', 'Torrenter', 'Elementum', 'Torrentin'])
+    channels = [
+	'plugin://plugin.video.quasar/play?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
+	'plugin://plugin.video.torrenter/?action=playSTRM&url=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
+	'plugin://plugin.video.elementum/play?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0',
+	'plugin://plugin.video.torrentin/?uri=http://estrenosby.net/[makelist.param2]&image=imageurl&player=0']	
+    return channels[ret]
+]]></expres>
+<page></page>
+</regex>
+ 
+<fanart></fanart> 
+<thumbnail></thumbnail>
+</item>
