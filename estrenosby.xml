@@ -318,7 +318,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Categoria[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle][/COLOR] </title>
 <link>$doregex[regex1]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -332,7 +332,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex1</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle][/COLOR] </title>
 <link>$doregex[regex2]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -345,7 +345,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex2</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle][/COLOR] </title>
 <link>$doregex[regex3]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -359,7 +359,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex3</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle][/COLOR] </title>
 <link>$doregex[select]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -422,7 +422,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>http://estrenosby.net[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)<div class="MiniFicha">[\w\W\s]{0,150}<a href="([^"]+).*?img src="([^"]+).*?[\w\W\s]{0,350}">([^<]+).*?[\w\W\s]{0,100}&raquo;([^<]+).*?]]></expres>
-<page>http://estrenosby.net/descarga-0-58122-0-0-fx-1-[paginado.param1]-.fx</page>			
+<page>http://estrenosby.net/descarga-0-58127-0-0-fx-1-[paginado.param1]-.fx</page>			
 </regex>
  
  
@@ -531,7 +531,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex1</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Categoria[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[regex2]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -544,7 +544,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex2</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Categoria[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[regex3]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -558,7 +558,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex3</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Categoria[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[select]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
