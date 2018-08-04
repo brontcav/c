@@ -56,10 +56,10 @@
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
 <fanart>http://estrenosby.net[regex.param2]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)<div id="link_tt" class="links">[\w\W\s]{0,50}<a href="([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)putlocker</strong></div>[\w\W\s]{0,150}<a href="([^"]+).*?]]></expres>
 <page>[regex1.param1]</page>
 </regex>
-
+<!--
 <regex>
 <name>regex3</name>
 <listrepeat><![CDATA[
@@ -71,10 +71,10 @@
 ]]></listrepeat>
 <expres><![CDATA[(?s)putlocker</strong></div>[\w\W\s]{0,150}<a href="([^"]+).*?]]></expres>
 <page>[regex2.param1]</page>
-</regex>
+</regex>-->
 
 <regex>
-<name>regex4</name>
+<name>regex3</name>
 <listrepeat><![CDATA[
 <title>[COLOR mediumviolet]R4[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[select]</link>
@@ -83,7 +83,7 @@
 <fanart>http://estrenosby.net[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)Descargar Torrent: </span><br>[\w\W\s]{0,50}<a href="([^"]+).*?]]></expres>
-<page>[regex3.param1]</page>
+<page>[regex2.param1]</page>
 </regex>
 
 <regex>
