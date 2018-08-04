@@ -23,7 +23,7 @@
 <regex>
 <name>regex</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[regex1]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -37,7 +37,7 @@
 <regex>
 <name>regex1</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R1[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[regex2]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -50,7 +50,7 @@
 <regex>
 <name>regex2</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R2[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[regex3]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
@@ -59,24 +59,12 @@
 <expres><![CDATA[(?s)putlocker</strong></div>[\w\W\s]{0,150}<a href="([^"]+).*?]]></expres>
 <page>[regex1.param1]</page>
 </regex>
-<!--
-<regex>
-<name>regex3</name>
-<listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R3[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
-<link>$doregex[regex4]</link>
-<info></info>
-<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
-<fanart>http://estrenosby.net[regex.param2]</fanart> 
-]]></listrepeat>
-<expres><![CDATA[(?s)putlocker</strong></div>[\w\W\s]{0,150}<a href="([^"]+).*?]]></expres>
-<page>[regex2.param1]</page>
-</regex>-->
+
 
 <regex>
 <name>regex3</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R3[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<title>[COLOR mediumvioletred][regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
 <link>$doregex[select]</link>
 <info></info>
 <thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
