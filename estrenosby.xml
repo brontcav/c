@@ -588,12 +588,11 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>https://s20.postimg.cc/ksvxnd9ml/fondo_estrenos_go.jpg</fanart> 
 <thumbnail>https://s20.postimg.cc/rjcewqrml/icono_estrenos_go.png</thumbnail>
 </item>
+<!-------------------------------->
 
-
-<!--CARTELERA recortar-->
 <item>
 <SetViewMode>55</SetViewMode>
-<title>[B][COLOR darkgreen]ESTRENOSBY [COLOR goldenrod]CARTELERA[/COLOR][/B]</title>
+<title>[B][COLOR darkgreen]ESTRENOSBY [COLOR goldenrod]CARTELERA R[/COLOR][/B]</title>
 <link>$doregex[paginado]</link>
 <fanart>https://s20.postimg.cc/ksvxnd9ml/fondo_estrenos_go.jpg</fanart> 
 <thumbnail>https://s20.postimg.cc/rjcewqrml/icono_estrenos_go.png</thumbnail>
@@ -615,7 +614,11 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>regex</name>
 <listrepeat><![CDATA[
-<title>[COLOR mediumvioletred]R[regex.param2]</fanart> 
+<title>[COLOR mediumvioletred]R[regex.param3][COLOR thistle] Calidad[COLOR palegoldenrod][regex.param4][/COLOR] </title>
+<link>$doregex[regex1]</link>
+<info></info>
+<thumbnail>http://estrenosby.net[regex.param2]</thumbnail>
+<fanart>http://estrenosby.net[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)<div class="MiniFicha">[\w\W\s]{0,150}<a href="([^"]+).*?img src="([^"]+).*?[\w\W\s]{0,350}">([^<]+).*?[\w\W\s]{0,100}&raquo;([^<]+).*?]]></expres>
 <page>http://estrenosby.net/descarga-0-58126-0-0-fx-1-[paginado.param1]-.fx</page>
