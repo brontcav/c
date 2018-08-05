@@ -126,7 +126,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)id="OptE([^<]+).*?data-src="([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)OptE[\w\W\s]{0,200}domain=([^"]+).*?]]></expres>
 <page>[regex.param1]</page>
 </regex>
 
