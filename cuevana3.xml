@@ -93,14 +93,12 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex</name>
 <listrepeat><![CDATA[
 <SetViewMode>50</SetViewMode>
-<title>[COLOR lightseagreen][regex.param3][/COLOR]</title>
+<title>[COLOR lightseagreen][regex.param3][COLOR lighsalmon][regex.param4][COLOR mediumpurple] Servidor [COLOR peru][regex1.param1][/COLOR]</title>
 <link>$doregex[regex1]</link>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
-<expres><![CDATA[(?s)>
-                                        
-                                        <a href="([^"]+).*?[\w\W\s]{0,150}src="([^"]+).*?[\w\W\s]{0,350}<h2 class="Title">(.*?)<]]></expres>
+<expres><![CDATA[(?s)<a\shref="([^"]+)[\w\W\s]{0,150}src="([^"]+)[\w\W\s]{0,350}<h2 class="Title">([^<]+).*?class="Year">([^<]+).*?class="Description">.*?<p>([^<]+)<\/p>]]></expres>
 <page>https://www.cuevana3.com/page/[paginado.param1]?s=Espa%C3%B1ol</page>		
 <fanart></fanart>
 <thumbnail></thumbnail>
