@@ -117,6 +117,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>servidores</name>
 <expres>$pyFunction:'$doregex[enlaceserver]'.replace("https://www.rapidvideo", "Rapidvideo").replace("https://my.mail.ru/","mail.ru").replace("https://streamango.com","Streamango")</expres>
 <page></page>
+</regex>
 
 <regex>
 <name>regex1</name>
