@@ -107,15 +107,21 @@ def GetLSProData(page_data,Cookie_Jar,m):
 </regex>
 
 <regex>
+<name>enlaceserver</name>
+<expres><![CDATA[(?s)>OptE[\w\W\s]{0,200}domain=([^"]+).*?]]></expres>
+<page>[regex.param1]</page>		
+</regex>
+
+<regex>
 <name>servidores</name>
-<expres>$pyFunction:.replace("https://www.rapidvideo", "Rapidvideo").replace("https://my.mail.ru/","mail.ru").replace("https://streamango.com","Streamango")</expres>
+<expres>$pyFunction:'$doregex[enlaceserve]'.replace("https://www.rapidvideo", "Rapidvideo").replace("https://my.mail.ru/","mail.ru").replace("https://streamango.com","Streamango")</expres>
 <page></page>
 
 <regex>
 <name>regex1</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex.param3][COLOR mediumpurple] Servidor [COLOR peru][regex1.param1][/COLOR]</title>
+<title>[COLOR lighsalmon][regex.param3][COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidores]][/COLOR]</title>
 <urlsolve>[regex1.param2]$$LSPlayOnlyOne$$</urlsolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
