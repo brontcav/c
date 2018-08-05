@@ -43,7 +43,6 @@
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart>
 ]]></listrepeat>
-<!--<expres><![CDATA[(?s)OptE[\w\W\s]{0,100}data-src="([^"]+).*?]]></expres>-->
 <expres><![CDATA[(?s)OptE[\w\W\s]{0,200}domain=([^"]+).*?]]></expres>
 <page>[regex.param2]</page>
 </regex>
@@ -124,7 +123,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
 <title>[COLOR lighsalmon][regex.param3][COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidores]][/COLOR]</title>
-<urlsolve>$doregex[enlaceserver]$$LSPlayOnlyOne$$</urlsolve>
+<urlsolve>[regex1.param1]$$LSPlayOnlyOne$$</urlsolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
