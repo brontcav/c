@@ -183,11 +183,11 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
 <title>[COLOR lighsalmon][regex.param4][COLOR mediumpurple] Servidor [COLOR peru][regex1.param1][/COLOR]</title>
-<urlsolve>[regex1.param2]$$LSPlayOnlyOne$$</urlsolve>
+<urlsolve>[regex1.param1]$$LSPlayOnlyOne$$</urlsolve>
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)id="OptE([^<]+).*?data-src="([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)OptE[\w\W\s]{0,200}domain=([^"]+).*?]]></expres>
 <page>[regex.param2]</page>
 </regex>
 
