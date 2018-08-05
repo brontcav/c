@@ -43,7 +43,8 @@
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)OptE[\w\W\s]{0,100}data-src="([^"]+).*?]]></expres>
+<!--<expres><![CDATA[(?s)OptE[\w\W\s]{0,100}data-src="([^"]+).*?]]></expres>-->
+<expres><![CDATA[(?s)OptE[\w\W\s]{0,200}domain=([^"]+).*?]]></expres>
 <page>[regex.param2]</page>
 </regex>
 
