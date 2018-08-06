@@ -1,0 +1,20 @@
+<item>
+<title>[COLOR white]peli suelta cuevana[/COLOR]</title>
+<link>$doregex[url]</link>
+<regex>
+<name>url</name>
+<listrepeat><![CDATA[
+<title>[COLOR lightskyblue][url.param1]) [COLOR white]$doregex[titulo][/COLOR] </title>
+<urlsolve>http[url.param2]//[url.param3]/[url.param4]</urlsolve>
+<thumbnail></thumbnail>
+<fanart></fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)(?s)TPlayerNv="OptE(.*?)".*?domain=http(.*?)//(.*?)/(.*?)"]]></expres>
+<page>https://www.cuevana3.com/3770/ver-lady-macbeth-online-fdl0</page>
+</regex>
+<regex>
+<name>titulo</name>
+<expres>$pyFunction:('[url.param3]').replace('.com','').replace('.net','').replace('www.','').replace('.',' ')</expres>
+<page></page>
+</regex>
+</item>
