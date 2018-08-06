@@ -95,6 +95,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <SetViewMode>50</SetViewMode>
 <title>[COLOR lightseagreen][regex.param3][COLOR lightsalmon]-[regex.param4][/COLOR]</title>
 <link>$doregex[regex1]</link>
+<info>[regex.param5]</info>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
@@ -110,7 +111,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex1</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex.param3][COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidor][/COLOR]</title>
+<title>[COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidor][COLOR lighsalmon] [regex.param3][/COLOR]</title>
 <urlsolve>[regex1.param1]$$LSPlayOnlyOne$$</urlsolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
@@ -147,6 +148,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <SetViewMode>50</SetViewMode>
 <title>[COLOR lightseagreen][regex.param3][COLOR lightsalmon]-[regex.param4][/COLOR]</title>
 <link>$doregex[regex1]</link>
+<info>[regex.param5]</info>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
@@ -175,7 +177,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex1</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR lighsalmon][regex.param3][COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidor][/COLOR]</title>
+<title>[COLOR mediumpurple] Servidor [COLOR peru]$doregex[servidor][COLOR lighsalmon] [regex.param3][/COLOR]</title>
 <urlsolve>[regex1.param1]$$LSPlayOnlyOne$$</urlsolve>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
