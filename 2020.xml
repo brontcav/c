@@ -495,7 +495,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?title="Serie en HD ([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?e;">([^<]+).*?]]></expres>
 <page>http://descargas2020.com/series-hd/[regex.param1]/pg/[paginado2.param1]</page>
 </regex>
 
