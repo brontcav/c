@@ -233,12 +233,12 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title> [COLOR lime][regex.param3] [COLOR orchid]Calidad [COLOR chocolate][regex.param4][/COLOR]</title>
+<title> [COLOR lime][regex.param2] [COLOR orchid]Calidad [COLOR chocolate][regex.param4][/COLOR]</title>
 <link>$doregex[paginado2]</link>
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart>
 ]]></listrepeat> 
-<expres><![CDATA[(?s)<a href="http://descargas2020.com/series([^"]+).*?src="([^"]+).*?<h2>([^<]+).*?<span>([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)<a href="http://descargas2020.com/series/([^"]+).*?title="([^"]+).*?src="([^"]+).*?<span>([^<]+).*?]]></expres>
 <page>http://descargas2020.com/series/pg/[paginado.param1]/</page>
 </regex>
 
@@ -263,8 +263,8 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)<a href="http://descargas2020.com/descargar/serie/([^"]+).*?title="([^"]+).*?]]></expres>
-<page>http://descargas2020.com/series[regex.param1]/pg/[paginado2.param1]</page>
+<expres><![CDATA[(?s)href="http://descargas2020.com/descargar/serie/([^"]+).*?title="([^"]+).*?]]></expres>
+<page>http://descargas2020.com/series/[regex1.param1]/pg/[paginado2.param1]</page>
 </regex>
 
 
