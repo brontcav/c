@@ -358,7 +358,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)">       <a href="http://descargas2020.com/descargar([^"]+).*?title="Serie en HD ([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?title="Serie en HD Elementary ([^"]+).*?]]></expres>
 <page>http://descargas2020.com/series-hd/[regex.param1]/pg/[paginado2.param1]</page>
 </regex>
 
@@ -373,7 +373,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)window.location.href = "([^"]+).*?]]></expres>
-<page>http://descargas2020.com/descargar[regex1.param1]</page>
+<page>http://descargas2020.com[regex1.param1]</page>
 </regex>
 
 <regex>
@@ -472,7 +472,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <SetViewMode>55</SetViewMode>
 
-<title>[COLOR steelblue]TORRENTLOCURA [COLOR turquoise] Peliculas en 3D HD[/COLOR]</title>
+<title>[COLOR white]DECARGAS [COLOR red]2020 [COLOR turquoise] Peliculas en 3D HD[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 <regex>
@@ -491,13 +491,13 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title>[COLOR yellow][regex.param3][COLOR chocolate] Calidad [COLOR brown][regex.param4][/COLOR]</title>
+<title> [COLOR lime][regex.param3] [COLOR orchid]Calidad [COLOR chocolate][regex.param4][/COLOR]</title>
 <link>$doregex[regex1]</link>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
-<expres><![CDATA[(?s)<li>	<a href="http://torrentlocura.com([^"]+).*?src="([^"]+).*?<h2>([^<]+).*?<span>([^<]+).*?]]></expres>
-<page>http://torrentlocura.com/peliculas-3d/pg/[paginado.param1]/</page>
+<expres><![CDATA[(?s)href="http://descargas2020.com/([^"]+).*?src="([^"]+).*?<h2>([^<]+).*?<span>([^<]+).*?]]></expres>
+<page>http://descargas2020.com/peliculas-3d/pg/[paginado.param1]/</page>
 </regex>
 
 <regex>
@@ -534,145 +534,3 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>https://s20.postimg.cc/fqfiv8b1p/icono_2020.png</thumbnail>
 
 </item>
-
-<!--Otras Peliculas-->
-
-<item>
-<SetViewMode>55</SetViewMode>
-
-<title>[COLOR steelblue]TORRENTLOCURA [COLOR turquoise] Otras Peliculas[/COLOR]</title>
-<link>$doregex[paginado]</link>
-
-<regex>
-<name>paginado</name>
-<listrepeat><![CDATA[
-<title>[COLOR indianred]Otras Peliculas[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
-<link>$doregex[regex]</link>
-<fanart>https://s20.postimg.cc/leltm7n4t/fondo2020.jpg</fanart> 
-<thumbnail>https://s20.postimg.cc/fqfiv8b1p/icono_2020.png</thumbnail>
-]]></listrepeat>
-<expres>'(.*?)'</expres>
-<page>'1','2','3','4','5','6','7','8','9',</page>
-</regex>
-
-<regex>
-<name>regex</name>
-<listrepeat><![CDATA[
-<SetViewMode>55</SetViewMode>
-<title>[COLOR yellow][regex.param3][COLOR chocolate] Calidad [COLOR brown][regex.param4][/COLOR]</title>
-<link>$doregex[regex1]</link>
-<thumbnail>[regex.param2]</thumbnail>
-<fanart>[regex.param2]</fanart>
-]]></listrepeat> 
-<expres><![CDATA[(?s)<li>	<a href="http://torrentlocura.com([^"]+).*?src="([^"]+).*?<h2>([^<]+).*?<span>([^<]+).*?]]></expres>
-<page>http://torrentlocura.com/otras-peliculas/pg/[paginado.param1]/</page>
-</regex>
-
-<regex>
-<name>regex1</name>
-<listrepeat><![CDATA[
-<SetViewMode>55</SetViewMode>
-<title> [COLOR lime][regex.param3][COLOR chocolate] Calidad [COLOR brown][regex.param4][/COLOR]</title>
-<link>$doregex[select]</link>
-<thumbnail>[regex.param2]</thumbnail>
-<fanart>[regex.param2]</fanart> 
-]]></listrepeat>
-<expres><![CDATA[(?s)window.location.href = "([^"]+).*?]]></expres>
-<page>http://descargas2020.com/descargar[regex.param1]</page>
-</regex>
-
-<regex>
-<name>select</name>
-<expres><![CDATA[#$pyFunction
-def GetLSProData(page_data,Cookie_Jar,m):
-    import xbmcgui
-    dialog = xbmcgui.Dialog()
-    ret = dialog.select('Ver con:', ['[COLOR brown]Quasar[/COLOR]', '[COLOR brown]Torrenter[/COLOR]', '[COLOR brown]Elementum[/COLOR]', '[COLOR brown]Torrentin[/COLOR]'])
-    channels = [
-	'plugin://plugin.video.quasar/play?uri=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.elementum/play?uri=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.torrentin/?uri=[regex1.param1]&image=imageurl&player=0']	
-    return channels[ret]
-]]></expres>
-<page></page>
-</regex>
-
-<fanart>https://s20.postimg.cc/leltm7n4t/fondo2020.jpg</fanart> 
-<thumbnail>https://s20.postimg.cc/fqfiv8b1p/icono_2020.png</thumbnail>
-
-</item>
-
-
-<!--Buscar-->
-<!--
-<item>
-<SetViewMode>55</SetViewMode>
-
-<title>[COLOR steelblue]TORRENTLOCURA [COLOR turquoise] Buscar[/COLOR]</title>
-<link>$doregex[regex]</link>
-
-<regex>
-<name>regex</name>
-<listrepeat><![CDATA[
-<SetViewMode>55</SetViewMode>
-<title>[COLOR yellow][regex.param3][/COLOR]</title>
-<link>$doregex[regex1]</link>
-<thumbnail>[regex.param2]</thumbnail>
-<fanart>[regex.param2]</fanart>
-]]></listrepeat> 
-<expres><![CDATA[(?s)>	<a href="([^"]+).*?<img src="([^"]+).*?title="Descargar ([^"]+).*?]]></expres>
-<page>http://torrentlocura.com/buscar=$doregex[buscar]</page>
-</regex>
-
-<regex>
-<name>buscar</name>
-<expres><![CDATA[#$pyFunction
-import xbmc
-import xbmcaddon
-import xbmcgui
-def GetLSProData(page_data,Cookie_Jar,m):
-    dialog = xbmcgui.Dialog()
-    d = dialog.input('Buscar: ejemplo: Aviones', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
-    return d
-]]></expres>
-<page></page>
-<cookieJar></cookieJar>
-</regex>
-
-<regex>
-<name>regex1</name>
-<listrepeat><![CDATA[
-<SetViewMode>55</SetViewMode>
-<title> [COLOR lime][regex.param3][/COLOR]</title>
-<link>$doregex[select]</link>
-<thumbnail>[regex.param2]</thumbnail>
-<fanart>[regex.param2]</fanart> 
-]]></listrepeat>
-<expres><![CDATA[(?s)window.location.href = "([^"]+).*?]]></expres>
-<page>[regex.param1]</page>
-</regex>
-
-<regex>
-<name>select</name>
-<expres><![CDATA[#$pyFunction
-def GetLSProData(page_data,Cookie_Jar,m):
-    import xbmcgui
-    dialog = xbmcgui.Dialog()
-    ret = dialog.select('Ver con:', ['[COLOR brown]Quasar[/COLOR]', '[COLOR brown]Torrenter[/COLOR]', '[COLOR brown]Elementum[/COLOR]', '[COLOR brown]Torrentin[/COLOR]'])
-    channels = [
-	'plugin://plugin.video.quasar/play?uri=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.elementum/play?uri=[regex1.param1]&image=imageurl&player=0',
-	'plugin://plugin.video.torrentin/?uri=[regex1.param1]&image=imageurl&player=0']	
-    return channels[ret]
-]]></expres>
-<page></page>
-</regex>
-
-<fanart>https://s20.postimg.cc/leltm7n4t/fondo2020.jpg</fanart> 
-<thumbnail>https://s20.postimg.cc/fqfiv8b1p/icono_2020.png</thumbnail>
-
-
-
-</item>-->
