@@ -404,7 +404,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <SetViewMode>55</SetViewMode>
 
-<title>[COLOR steelblue]TORRENTLOCURA [COLOR turquoise] Peliculas en HD[/COLOR]</title>
+<title>[COLOR white]DECARGAS [COLOR red]2020 [COLOR turquoise] Peliculas en HD[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 <regex>
