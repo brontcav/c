@@ -490,12 +490,12 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex1</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title> [COLOR lime][regex1.param2][COLOR chocolate] Calidad [COLOR brown][regex.param4][/COLOR]</title>
+<title> [COLOR lime][regex1.param2][COLOR chocolate] Calidad [COLOR brown][regex1.param3][/COLOR]</title>
 <link>$doregex[regex2]</link>
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?e;">([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)<a href="http://descargas2020.com([^"]+).*?e;">([^<]+).*?e;">([^<]+).*?]]></expres>
 <page>http://descargas2020.com/series-hd/[regex.param1]/pg/[paginado2.param1]</page>
 </regex>
 
@@ -504,7 +504,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex2</name>
 <listrepeat><![CDATA[
 <SetViewMode>55</SetViewMode>
-<title> [COLOR lime][regex1.param2][COLOR chocolate] Calidad [COLOR brown][regex.param4][/COLOR]</title>
+<title> [COLOR lime][regex1.param2][COLOR chocolate] Calidad [COLOR brown][regex1.param3][/COLOR]</title>
 <link>$doregex[select]</link>
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
