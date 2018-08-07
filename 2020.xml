@@ -358,7 +358,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param3]</thumbnail>
 <fanart>[regex.param3]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?title="Serie en HD Elementary ([^"]+).*?]]></expres>
+<expres><![CDATA[(?s)">       <a href="http://descargas2020.com([^"]+).*?title="Serie en HD ([^"]+).*?]]></expres>
 <page>http://descargas2020.com/series-hd/[regex.param1]/pg/[paginado2.param1]</page>
 </regex>
 
@@ -510,7 +510,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)window.location.href = "([^"]+).*?]]></expres>
-<page>http://descargas2020.com/descargar[regex.param1]</page>
+<page>http://descargas2020.com/[regex.param1]</page>
 </regex>
 
 <regex>
