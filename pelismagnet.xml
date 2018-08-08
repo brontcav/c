@@ -27,7 +27,7 @@
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
-<expres><![CDATA[(?s)<a\shref="peliculas([^"]+).*?src=([^ ]+).*?foto">([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
 <page>https://pelismag.net/principal?p=[paginado.param1]/</page>
 
 <fanart></fanart>
@@ -44,7 +44,7 @@
 <fanart>[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
-<page>https://pelismag.net/peliculas[regex.param1]</page>
+<page>https://pelismag.net/peliculas/[regex.param1]</page>
 </regex>
 
 <regex>
@@ -95,7 +95,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)<a\shref="peliculas([^"]+).*?<img\ssrc=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
+<expres><![CDATA[((?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
 <page>https://pelismag.net/principal?p=[paginado.param1]</page>
 </regex>
  
@@ -109,7 +109,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
-<page>https://pelismag.net/peliculas[regex.param1]</page>
+<page>https://pelismag.net/peliculas/[regex.param1]</page>
 </regex>
  
 <regex>
