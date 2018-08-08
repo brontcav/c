@@ -43,7 +43,7 @@
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart> 
 ]]></listrepeat>
-<expres><![CDATA[(?s)href=magnet([^>]+).*?]]></expres>
+<expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
 <page>https://pelismag.net/peliculas[regex.param1]</page>
 </regex>
 
@@ -55,10 +55,10 @@ def GetLSProData(page_data,Cookie_Jar,m):
     dialog = xbmcgui.Dialog()
     ret = dialog.select('Ver con:', ['[COLOR yellow]Quasar[/COLOR]', '[COLOR yellow]Torrenter[/COLOR]', '[COLOR yellow]Elementum[/COLOR]', '[COLOR yellow]Torrentin[/COLOR]'])
     channels = [
-  'plugin://plugin.video.quasar/play?uri=magnet[regex1.param1]&image=imageurl&player=0',
-  'plugin://plugin.video.torrenter/?action=playSTRM&url=magnet[regex1.param1]&image=imageurl&player=0',
-  'plugin://plugin.video.elementum/play?uri=magnet[regex1.param1]&image=imageurl&player=0',
-  'plugin://plugin.video.torrentin/?uri=magnet[regex1.param1]&image=imageurl&player=0']  
+  'plugin://plugin.video.quasar/play?uri=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.elementum/play?uri=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrentin/?uri=[regex1.param1]&image=imageurl&player=0']  
     return channels[ret]
 ]]></expres>
 <page></page>
