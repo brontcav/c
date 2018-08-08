@@ -68,3 +68,68 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail></thumbnail>
 
 </item>
+
+
+<item>
+<title>[B][COLOR blue]Pelismag NET[COLOR gold]Peliculas[/COLOR][/B]</title>
+<link>$doregex[paginado]</link>
+ 
+<regex>
+<name>paginado</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][B]Pelismag NET[COLOR gold] Pagina [COLOR gold][paginado.param1][/B][/COLOR]</title>
+<link>$doregex[regex]</link>
+<fanart>https://pelismag.net/logo.png</fanart>
+<thumbnail>https://pelismag.net/logo.png</thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81'.'82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100'</page>
+</regex>
+ 
+<regex>
+<name>regex</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][B][regex.param3][/B][/COLOR]</title>
+<link>$doregex[regex2]</link>
+<info></info>
+<thumbnail>[regex.param2]</thumbnail>
+<fanart>[regex.param2]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)<a\shref="([^"]+).*?<img\ssrc=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
+<page>https://pelismag.net/principal?p=[paginado.param1]</page>
+</regex>
+ 
+<regex>
+<name>regex2</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][regex.param3][/COLOR] </title>
+<link>$doregex[select]</link>
+<info></info>
+<thumbnail>[regex.param2]</thumbnail>
+<fanart>[regex.param2]</fanart>
+]]></listrepeat>
+<expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
+<page>https://pelismag.net/[regex.param1]</page>
+</regex>
+ 
+<regex>
+<name>select</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    ret = dialog.select('Watch with:', ['Elementum', 'Quasar', 'Torrenter', 'Torrentin'])
+    channels = [
+  'plugin://plugin.video.elementum/play?url=[regex2.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.quasar/play?uri=[regex2.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex2.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrentin/?uri=[regex2.param1]&image=imageurl&player=0']  
+    return channels[ret]
+]]></expres>
+<page></page>
+</regex>
+ 
+<fanart>https://pelismag.net/logo.png</fanart>
+<thumbnail>https://pelismag.net/logo.png</thumbnail>
+ 
+</item>
