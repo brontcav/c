@@ -3,7 +3,7 @@
 <item>
 <SetViewMode>50</SetViewMode>
 
-<title>[COLOR white]PELICULAS PELISMAGNET[/COLOR]</title>
+<title>[COLOR firebrick]PELICULAS[COLOR white] PELISMAGNET[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
 <regex>
@@ -95,7 +95,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[((?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
 <page>https://pelismag.net/principal?p=[paginado.param1]</page>
 </regex>
  
@@ -133,3 +133,20 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>https://pelismag.net/logo.png</thumbnail>
  
 </item>
+
+
+<!--GENEROS-->
+
+<regex>
+<name>regex</name>
+<listrepeat><![CDATA[
+<title>[COLOR blue][B][regex.param1][/B][/COLOR]</title>
+<link>$doregex[regex2]</link>
+<info></info>
+<thumbnail>[regex.param2]</thumbnail>
+<fanart>[regex.param2]</fanart>
+]]></listrepeat>
+<expres><![CDATA[(?s)href="genero([^"]+).*?]]></expres>
+<page>https://pelismag.net/principal</page>
+</regex>
+
