@@ -44,7 +44,7 @@
 <fanart>[regex.param2]</fanart> 
 ]]></listrepeat>
 <expres><![CDATA[(?s)href=magnet([^>]+).*?]]></expres>
-<page>https://pelismag.net/peliculas[regex1.param1]</page>
+<page>https://pelismag.net/peliculas[regex.param1]</page>
 </regex>
 
 <regex>
