@@ -9,7 +9,7 @@
 <regex>
 <name>paginado</name>
 <listrepeat><![CDATA[
-<title>[COLOR white]LO MAS POPULAR PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
+<title>[COLOR firebrick]LO MAS POPULAR[COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
 <link>$doregex[regex]</link>
 <fanart></fanart> 
 <thumbnail></thumbnail>
