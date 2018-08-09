@@ -95,7 +95,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)<a\shref="([^"]+).*?<img\ssrc=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
 <page>https://pelismag.net/principal?p=[paginado.param1]</page>
 </regex>
  
@@ -109,7 +109,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat>
 <expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
-<page>https://pelismag.net/peliculas/[regex.param1]</page>
+<page>https://pelismag.net/[regex.param1]</page>
 </regex>
  
 <regex>
@@ -136,6 +136,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <!--GENEROS-->
+<item>
 
 <regex>
 <name>regex</name>
@@ -149,4 +150,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <expres><![CDATA[(?s)href="genero([^"]+).*?]]></expres>
 <page>https://pelismag.net/principal</page>
 </regex>
+
+</item>
 
