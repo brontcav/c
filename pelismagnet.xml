@@ -6,6 +6,13 @@
 <title>[COLOR firebrick]PELICULAS[COLOR white] PELISMAGNET[/COLOR]</title>
 <link>$doregex[paginado]</link>
 
+<fanart>$doregex[fondo]</fanart>
+<thumbnail></thumbnail>
+
+<regex>
+<name>fondo</fondo>
+<expres><![CDATA[background-image: url\('([^']+).*?]]></expres>
+<page>https://pelismag.net/principal</page>
 <regex>
 <name>paginado</name>
 <listrepeat><![CDATA[
