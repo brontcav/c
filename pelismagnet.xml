@@ -13,12 +13,15 @@
 <name>fondo</fondo>
 <expres><![CDATA[background-image: url\('([^']+).*?]]></expres>
 <page>https://pelismag.net/principal</page>
+</regex>
+
+
 <regex>
 <name>paginado</name>
 <listrepeat><![CDATA[
 <title>[COLOR firebrick]LO MAS POPULAR[COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
 <link>$doregex[regex]</link>
-<fanart></fanart> 
+<fanart>$doregex[fondo]</fanart> 
 <thumbnail></thumbnail>
 ]]></listrepeat>
 <expres>'(.*?)'</expres>
@@ -161,18 +164,87 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <page>https://pelismag.net/principal</page>
 </regex>
 
+
+
 <regex>
 <name>regex2</name>
 <listrepeat><![CDATA[
 <title>[COLOR blue][B][regex.param1][/B][/COLOR]</title>
-<link>https://pelismag.net/principal/genero[regex1.param1]</link>
+<link>$doregex[regex3]</link>
 <info></info>
 <thumbnail></thumbnail>
-<fanart></fanart>
+<fanart>$$doregex[fondog]</fanart>
 ]]></listrepeat>
-<expres><![CDATA[(?s)href="genero([^"]+).*?]]></expres>
-<page>https://pelismag.net/principal/genero[regex1.param1]</page>
+<expres><![CDATA[(?s)href="genero/([^"]+).*?]]></expres>
+<page>https://pelismag.net/principal/genero/[regex1.param1]</page>
 </regex>
+
+<regex>
+<name>fondog</fondo>
+<expres><![CDATA[background-image: url\('([^']+).*?]]></expres>
+<page>https://pelismag.net/principal/genero/[regex1.param1</page>
+</regex>
+
+<regex>
+<name>paginadog</name>
+<listrepeat><![CDATA[
+<title>[COLOR firebrick][regex.param1][COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginadog.param1][/COLOR]</title>
+<link>$doregex[regex3]</link>
+<fanart>$doregex[fondog]</fanart> 
+<thumbnail></thumbnail>
+]]></listrepeat>
+<expres>'(.*?)'</expres>
+<page>'0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99',</page>
+</regex>
+
+<regex>
+<name>regex3</name>
+<listrepeat><![CDATA[
+<SetViewMode>50</SetViewMode>
+<title>[COLOR royalblue][regex3.param3] [/COLOR]</title>
+<link>$doregex[regex4]</link>
+<thumbnail>[regex3.param2]</thumbnail>
+<fanart>[regex3.param2]</fanart>
+]]></listrepeat> 
+<expres><![CDATA[(?s)<a\shref="peliculas([^"]+).*?<img\ssrc=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
+<page>https://pelismag.net/genero/[regex.param1]/[paginadog.param1]</page>		
+<fanart></fanart>
+<thumbnail></thumbnail>
+</regex>
+
+<regex>
+<name>regex4</name>
+<listrepeat><![CDATA[
+<SetViewMode>55</SetViewMode>
+<title> [COLOR aqua][regex3.param3][/COLOR]</title>
+<urlsolve>$doregex[select]</urlsolve>
+<thumbnail>[regex3.param2]</thumbnail>
+<fanart>[regex3.param2]</fanart> 
+]]></listrepeat>
+<expres><![CDATA[<a\shref=([^\s]+).*?class="btnz\sgreen]]></expres>
+<page>https://pelismag.net/peliculas/[regex.param1]</page>
+</regex>
+
+<regex>
+<name>select</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    ret = dialog.select('Ver con:', ['[COLOR yellow]Quasar[/COLOR]', '[COLOR yellow]Torrenter[/COLOR]', '[COLOR yellow]Elementum[/COLOR]', '[COLOR yellow]Torrentin[/COLOR]'])
+    channels = [
+  'plugin://plugin.video.quasar/play?uri=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.elementum/play?uri=[regex1.param1]&image=imageurl&player=0',
+  'plugin://plugin.video.torrentin/?uri=[regex1.param1]&image=imageurl&player=0']  
+    return channels[ret]
+]]></expres>
+<page></page>
+</regex>
+
+<fanart></fanart>
+<thumbnail></thumbnail>
+
 
 </item>
 
