@@ -27,7 +27,7 @@
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
-<expres><![CDATA[(?s)</a><a href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
+<expres><![CDATA[(?s)href="peliculas/([^"]+).*?src=([^"]+).*?foto">([^<]+).*?]]></expres>
 <page>https://pelismag.net/principal?p=[paginado.param1]/</page>
 
 <fanart></fanart>
