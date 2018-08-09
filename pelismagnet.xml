@@ -53,7 +53,7 @@
 def GetLSProData(page_data,Cookie_Jar,m):
     import xbmcgui
     dialog = xbmcgui.Dialog()
-    ret = dialog.select('Ver con:', ['[COLOR red]Quasar[/COLOR]', '[COLOR yellow]Torrenter[/COLOR]', '[COLOR yellow]Elementum[/COLOR]', '[COLOR yellow]Torrentin[/COLOR]'])
+    ret = dialog.select('Ver con:', ['[COLOR yellow]Quasar[/COLOR]', '[COLOR yellow]Torrenter[/COLOR]', '[COLOR yellow]Elementum[/COLOR]', '[COLOR yellow]Torrentin[/COLOR]'])
     channels = [
   'plugin://plugin.video.quasar/play?uri=[regex1.param1]&image=imageurl&player=0',
   'plugin://plugin.video.torrenter/?action=playSTRM&url=[regex1.param1]&image=imageurl&player=0',
@@ -137,6 +137,9 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 <!--GENEROS-->
 <item>
+
+<title>[COLOR firebrick]GENEROS[COLOR white] PELISMAGNET[/COLOR]</title>
+<link>$doregex[regex]</link>
 
 <regex>
 <name>regex</name>
