@@ -173,7 +173,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<a\shref="peliculas\/([^"]+).*?src=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
-<page>https://pelismag.net/genero/Aventura/[paginado.param1]</page>		
+<page>https://pelismag.net/genero/Acción/[paginado.param1]</page>		
 <fanart></fanart>
 <thumbnail></thumbnail>
 </regex>
@@ -259,7 +259,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex3.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<a\shref="peliculas\/([^"]+).*?src=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
-<page>https://pelismag.net/genero/Aventura</page>		
+<page>https://pelismag.net/g[regex.param1]</page>		
 <fanart></fanart>
 <thumbnail></thumbnail>
 </regex>
