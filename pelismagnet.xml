@@ -188,7 +188,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex3.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<a\shref="pelicula\/([^"]+).*?src=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
-<page>https://pelismag.net/genero/[regex.param1]</page>		
+<page>https://pelismag.net/g[regex.param1]</page>		
 <fanart></fanart>
 <thumbnail></thumbnail>
 </regex>
