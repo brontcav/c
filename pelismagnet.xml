@@ -241,7 +241,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>paginado</name>
 <listrepeat><![CDATA[
 <title>[COLOR firebrick]G[regex.param1][COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
-<link></link>
+<link>$doregex[regex3]</link>
 <fanart></fanart> 
 <thumbnail></thumbnail>
 ]]></listrepeat>
