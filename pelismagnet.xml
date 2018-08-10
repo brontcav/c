@@ -253,7 +253,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex3</name>
 <listrepeat><![CDATA[
 <SetViewMode>50</SetViewMode>
-<title>[COLOR royalblue]G[regex3.param3] [/COLOR]</title>
+<title>[COLOR royalblue][regex3.param3] [/COLOR]</title>
 <link>$doregex[regex4]</link>
 <thumbnail>[regex3.param2]</thumbnail>
 <fanart>[regex3.param2]</fanart>
