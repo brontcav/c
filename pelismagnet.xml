@@ -173,7 +173,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<a\shref="peliculas\/([^"]+).*?src=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
-<page>https://pelismag.net/genero/Acción/[paginado.param1]</page>		
+<page>https://pelismag.net/genero/Acci%C3%B3n/[paginado.param1]</page>			
 <fanart></fanart>
 <thumbnail></thumbnail>
 </regex>
@@ -226,7 +226,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <name>regex</name>
 <listrepeat><![CDATA[
 <title>[COLOR blue][B]G[regex.param1][/B][/COLOR]</title>
-<link>$doregex[regex3]</link>
+<link>$doregex[paginado]</link>
 <info></info>
 <thumbnail>[regex.param2]</thumbnail>
 <fanart>[regex.param2]</fanart>
@@ -238,9 +238,9 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <regex>
-<name>paginadog</name>
+<name>paginado</name>
 <listrepeat><![CDATA[
-<title>[COLOR firebrick]G[regex.param1][COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginadog.param1][/COLOR]</title>
+<title>[COLOR firebrick]G[regex.param1][COLOR white] PELISMAGNET[COLOR gold] Pagina [COLOR lime][paginado.param1][/COLOR]</title>
 <link></link>
 <fanart></fanart> 
 <thumbnail></thumbnail>
@@ -259,7 +259,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <fanart>[regex3.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<a\shref="peliculas\/([^"]+).*?src=([^\s]+).*?titulfoto">([^<]+).*?]]></expres>
-<page>https://pelismag.net/g[regex.param1]</page>		
+<page>https://pelismag.net/g[regex.param1]/[paginado.param1]</page>		
 <fanart></fanart>
 <thumbnail></thumbnail>
 </regex>
