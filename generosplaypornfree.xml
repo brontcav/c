@@ -128,7 +128,7 @@
 <fanart>[regex.param2]</fanart>
 ]]></listrepeat> 
 <expres><![CDATA[(?s)<article id="([^"]+).*?src="([^"]+).*?alt="([^"]+).*?href="([^"]+).*?]]></expres>
-<page>[generos.param2]/</page>
+<page>[generos.param2]/[paginado.param1]</page>
 </regex>
 
 <regex>
